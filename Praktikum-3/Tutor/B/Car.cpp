@@ -21,7 +21,7 @@ bool Car::getOn() {
 }
 
 void Car::fillingFuel(Fuel t_fuel, int amount_in_liter) {
-	if (t_fuel != premium && t_fuel != pertamax && t_fuel != solar) {
+	if (t_fuel != fuel) {
 		throw t_fuel;
 	}
 	cout << "Berhasil isi bensin sebanyak " << amount_in_liter << " liter" << endl;
