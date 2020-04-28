@@ -24,11 +24,11 @@ public class LaptopTest {
             if (p.getName() == "java.lang.Integer" && m.getName() == "getRamSize") {
                 return true;
             }
-            if (p.getName() != "java.lang.Integer") {
-                System.out.println("Tipe return method harus Integer");
-            }
             if (m.getName() != "getRamSize") {
                 System.out.println("Nama method harus getRamSize");
+            }
+            if (p.getName() != "java.lang.Integer") {
+                System.out.println("Tipe return method harus Integer");
             }
             return false;
             // Jika nama method bukan getRamSize, tuliskan "Nama method harus getRamSize" (tanpa petik) ke layar
@@ -50,11 +50,11 @@ public class LaptopTest {
             if (p.getName() == "java.lang.String" && f.getName() == "serialNumber") {
                 return true;
             }
-            if (p.getName() != "java.lang.String") {
-                System.out.println("Tipe field harus String");
-            }
             if (f.getName() != "serialNumber") {
                 System.out.println("Nama field harus serialNumber");
+            }
+            if (p.getName() != "java.lang.String") {
+                System.out.println("Tipe field harus String");
             }
             return false;
             // Jika nama field bukan serialNumber, tuliskan "Nama field harus serialNumber" (tanpa petik) ke layar

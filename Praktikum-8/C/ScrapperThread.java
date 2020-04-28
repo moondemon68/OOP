@@ -1,13 +1,22 @@
-import java.util.ArrayList;
+import java.lang.Thread;
 
 public class ScrapperThread extends Thread {
-    private String url; 
+    private ScrapperListener listener;
+    private String url;
 
-    public ScrapperThread(String url) {
+    public ScrapperThread(ScrapperListener listener, String url) {
+        this.listener = listener;
         this.url = url;
     }
 
-    public synchronized void run() {
-        
+    @Override
+    public void run() {
+        Website w = new Website(this.url);
+        this.listener.onScrapeListener(w.getPrice());
+        this.notify();
+    }
+
+    public interface ScrapperListener {
+        public void onScrapeListener(int price);
     }
 }
